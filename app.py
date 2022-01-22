@@ -23,15 +23,15 @@ def predict():
     prediction1 = classifier.predict(final_features)
     prediction2 = model.predict(final_features)
     if prediction1 == 1 and prediction2 == 0:
-        return render_template('index.html', prediction1_text = f"This song is predicted to make the Spotify Top 200 Charts!", prediction2_text = f"It will likely be on the charts for 1-4 weeks.")
+        return render_template('index.html', prediction1_text = "This song is predicted to make the Spotify Top 200 Charts!", prediction2_text = "It will likely be on the charts for 1-4 weeks.")
     elif prediction1 == 1 and prediction2 == 1:
-        return render_template('index.html', prediction1_text = f"This song is predicted to make the Spotify Top 200 Charts!", prediction2_text = f"It will likely be on the charts for 5-24 weeks.")
+        return render_template('index.html', prediction1_text = "This song is predicted to make the Spotify Top 200 Charts!", prediction2_text = "It will likely be on the charts for 5-24 weeks.")
     elif prediction1 == 1 and prediction2 == 2:
-        return render_template('index.html', prediction1_text = f"This song is predicted to make the Spotify Top 200 Charts!", prediction2_text = f"It will likely be on the charts for 25-52 weeks.")
+        return render_template('index.html', prediction1_text = "This song is predicted to make the Spotify Top 200 Charts!", prediction2_text = "It will likely be on the charts for 25-52 weeks.")
     elif prediction1 == 1 and prediction2 == 3:
-        return render_template('index.html', prediction1_text = f"This song is predicted to make the Spotify Top 200 Charts!", prediction2_text = f"It will likely be on the charts for over a year!")
+        return render_template('index.html', prediction1_text = "This song is predicted to make the Spotify Top 200 Charts!", prediction2_text = "It will likely be on the charts for over a year!")
     else:
-        return render_template('index.html', prediction1_text = f"This song is not predicted to make the Spotify Top 200 Charts.")
+        return render_template('index.html', prediction1_text = "This song is not predicted to make the Spotify Top 200 Charts.")
 
 if __name__ == '__main__':
     app.run(debug=True)
